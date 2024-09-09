@@ -33,6 +33,38 @@ body {
 	line-height: 1;
 }
 
+/* Ensure both boxes have equal height */
+.row.aln-center {
+    display: flex;
+    align-items: stretch; /* Makes sure both boxes align properly */
+}
+
+/* Make the buttons black and occupy the full width at the bottom */
+.button.full-width {
+    background-color: black; /* Set the button color to black */
+    color: white; /* White text */
+    display: block;
+    width: 100%; /* Full width of the box */
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.button.full-width:hover {
+    background-color: #333; /* Darker hover effect */
+}
+
+/* Ensure sections have equal height */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
 ol, ul {
 	list-style: none;
 }
