@@ -36,7 +36,7 @@ body {
 /* Ensure both boxes have equal height */
 .row.aln-center {
     display: flex;
-    align-items: stretch; /* Makes sure both boxes align properly */
+    align-items: stretch; /* Ensure boxes align vertically */
 }
 
 /* Make the buttons black and occupy the full width at the bottom */
@@ -49,6 +49,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    margin-top: auto; /* Ensure the button stays at the bottom */
     position: relative;
 }
 
@@ -62,8 +63,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    padding: 20px; /* Added padding to adjust inner spacing */
 }
 
+/* Adjust the size of the text and padding for responsiveness */
+@media (max-width: 768px) {
+    .button.full-width {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
 
 ol, ul {
 	list-style: none;
