@@ -80,18 +80,20 @@ body {
 }
 
 /* Media query for smaller screens (below 768px) */
+/* Ensure image is responsive and doesn't overlap */
+.image.fit img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 50%; /* This adds a circular style if needed */
+}
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    .row {
-        flex-direction: column; /* Stack the image and text vertically */
-    }
-
-    .col-4, .col-5-large, .col-8, .col-7-large {
-        width: 100%; /* Make sure columns take full width */
-    }
-
     .image.fit img {
-        max-width: 100%; /* Ensure the image doesn't overflow */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 70%; /* Constrain the size of the image */
+        margin-bottom: 20px; /* Add space between the image and text */
     }
 
     header h1 {
@@ -102,6 +104,7 @@ body {
         font-size: 1.2em; /* Adjust paragraph size for mobile screens */
     }
 }
+
 
 ol, ul {
 	list-style: none;
