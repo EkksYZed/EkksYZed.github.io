@@ -72,7 +72,36 @@ body {
         padding: 10px; /* Adjust button padding for smaller screens */
     }
 }
+/* Default for larger screens */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+/* Media query for smaller screens (below 768px) */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack the image and text vertically */
+    }
+
+    .col-4, .col-5-large, .col-8, .col-7-large {
+        width: 100%; /* Make sure columns take full width */
+    }
+
+    .image.fit img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Adjust text size for mobile screens */
+    }
+
+    p {
+        font-size: 1.2em; /* Adjust paragraph size for mobile screens */
+    }
+}
 
 ol, ul {
 	list-style: none;
