@@ -11,6 +11,60 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.row {
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+			}
+			.col-6 {
+				flex: 1;
+				margin: 10px;
+			}
+			.box {
+				position: relative;
+				padding: 20px;
+				background-color: #f4f4f4;
+				border: 1px solid #ddd;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				height: 100%; /* Make boxes equal height */
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.box.style1 .icon {
+				font-size: 50px;
+				margin-bottom: 15px;
+			}
+			.box.style1 h3 {
+				margin-bottom: 10px;
+			}
+			.button {
+				display: block;
+				width: 100%;
+				background-color: black;
+				color: white;
+				text-align: center;
+				padding: 15px;
+				text-decoration: none;
+				font-weight: bold;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			.box.style1.blog-box {
+				background-image: url('image07.jpg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 0.8;
+			}
+			.box.style1.blog-box h3, 
+			.box.style1.blog-box p {
+				color: white;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -53,8 +107,7 @@
 				<div class="row aln-center">
 					<!-- Blog Section -->
 					<div class="col-6 col-12-medium">
-						<section class="box style1">
-							<span class="icon featured fas fa-blog"></span>
+						<section class="box style1 blog-box">
 							<h3>Blog</h3>
 							<p>Check out my latest articles and posts on cybersecurity, tech, and more.</p>
 							<a href="https://medium.com/@aaronnlobo11" class="button" target="_blank">Visit my Medium</a>
@@ -63,16 +116,14 @@
 					<!-- GitHub Section -->
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
-							<span class="icon featured fab fa-github"></span>
 							<h3>GitHub</h3>
-							<p>Explore my projects on GitHub.</p>
+							<p>Explore my projects and code contributions on GitHub.</p>
 							<a href="https://github.com/EkksYZed" class="button" target="_blank">Visit my GitHub</a>
 						</section>
 					</div>
 				</div>
 			</div>
 		</article>
-		
 		
 
 		<!-- Portfolio -->
