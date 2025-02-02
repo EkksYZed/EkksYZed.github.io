@@ -44,8 +44,6 @@
 			</div>
 		</article>
 		
-<!-- Experience Section -->
-<!-- Experience Section -->
 <article id="experience" class="wrapper style2">
     <div class="container">
         <header>
@@ -56,9 +54,17 @@
                 <i class="fas fa-briefcase fa-3x"></i>
                 <h3 id="job-title">Information Security Analyst Intern</h3>
                 <p id="company"><strong>Keck Medicine Of USC • Los Angeles, CA, USA</strong> | Nov 2023 - Present</p>
-                <p id="description">Write your summary here...</p>
-                <ul id="job-details"></ul>
-                <p><strong>Tools Used:</strong> <span id="tools-used"></span></p>
+                <p id="description"><strong>At Keck Medicine of USC, my mentor has been the Director of Security. I manage a broad range of responsibilities, working on both analyst and engineering projects, utilizing various security tools to enhance cybersecurity defenses and streamline operations.</strong></p>
+                <ul id="job-details">
+                    <li>Engineered Role-Based Access Control (RBAC) processes for 3,000+ users, automating provisioning speed by 24%, maintaining HIPAA compliance</li>
+                    <li>Developed SIEM (Microsoft Sentinel) workbooks and dashboards to triage alerts and correlate logs, improving incident response efficiency by 32%</li>
+                    <li>Conducted forensic investigations on security incidents, collaborating with the SOC to analyze suspicious user behavior</li>
+                    <li>Built custom threat profiles to monitor 16 relevant threat actors, leveraging the MITRE ATT&CK framework and Mandiant Advantage Suite</li>
+                    <li>Authored detailed incident response playbooks and SOPs, reducing response times by 20%</li>
+                    <li>Provisioned user access across multiple applications for approximately 300 users and optimized O365 A5 licenses, saving costs</li>
+                    <li>Conducted security tests on 80+ IAM workflows, ensuring compliance with access control policies</li>
+                </ul>
+                <p><strong>Tools Used:</strong> SailPoint, Microsoft Sentinel, Mandiant Advantage, Qualys, BigFix, Active Directory, ADManager Plus, SQL, Java, KQL</p>
             </section>
             <button class="button next-experience" style="background-color: black; color: white; border-radius: 8px; padding: 10px 20px; font-size: 16px; transition: all 0.3s ease;">Next</button>
         </div>
@@ -68,24 +74,9 @@
 <script>
     const experiences = [
         {
-            title: "Information Security Analyst Intern",
-            company: "Keck Medicine Of USC • Los Angeles, CA, USA | Nov 2023 - Present",
-            description: "At Keck Medicine of USC, my mentor has been the Director of Security. I have a broad set of responsibilities consisting of a mix of Analyst and Engineering projects utilizing various security tools",
-            details: [
-                "Engineered Role-Based Access Control (RBAC) processes for 3,000+ users, automating provisioning speed by 24%, maintaining HIPAA compliance",
-                "Developed SIEM (Microsoft Sentinel) workbooks and dashboards to triage alerts and correlate logs, improving incident response efficiency by 32%",
-                "Conducted forensic investigations on security incidents, collaborating with the SOC to analyze suspicious user behavior",
-                "Built custom threat profiles to monitor 16 relevant threat actors, leveraging the MITRE ATT&CK framework and Mandiant Advantage Suite",
-                "Authored detailed incident response playbooks and SOPs, reducing response times by 20%",
-                "Provisioned user access across multiple applications for approximately 300 users and optimized O365 A5 licenses, saving costs",
-                "Conducted security tests on 80+ IAM workflows, ensuring compliance with access control policies"
-            ],
-            technologies: "SailPoint, Microsoft Sentinel, Mandiant Advantage, Qualys, BigFix, Active Directory, ADManager Plus, SQL, Java, KQL"
-        },
-        {
             title: "Data Engineer",
             company: "Manipal Cigna • Mumbai, Maharashtra, India | Aug 2022 - Nov 2022",
-            description: "At Manipal Cigna, I worked as a Data Engineer ensuring that data is secure and consistent. I mainly worked with SQL, developing queries to improve the efficieny of certain tasks",
+            description: "<strong>At Manipal Cigna, I worked as a Data Engineer ensuring data security and consistency. I developed optimized SQL queries to improve data processing efficiency and enhance operational workflows.</strong>",
             details: [
                 "Investigated 30+ potentially fraudulent claims daily, mitigating risks and safeguarding company assets",
                 "Maintained data integrity and availability by managing Data Lake loading processes, increasing validation speed by 14%",
@@ -96,7 +87,7 @@
         {
             title: "Information Security Intern",
             company: "Bharti Axa • Mumbai, Maharashtra, India | Nov 2021 - Jan 2022",
-            description: "At Bharti Axa, I was mentored by the CISO. I shadowed him in his daily tasks while working on assessing and mitigating the vulnerability of newly launched applications. I also performed policy reviews for audits leading to the ISO/IEC 27001 Certification",
+            description: "<strong>At Bharti Axa, I was mentored by the CISO, shadowing him in daily security tasks. I conducted vulnerability assessments and policy reviews that contributed to the company's ISO/IEC 27001 certification.</strong>",
             details: [
                 "Performed vulnerability scans using Nessus on 18 web applications, identifying security gaps and delivering remediation reports",
                 "Led vulnerability mitigation efforts with application owners and IT teams, enhancing the organization's security posture",
@@ -132,7 +123,6 @@
     updateExperience();
 </script>
 
-<!-- Projects & Research Section -->
 <article id="projects" class="wrapper style2">
     <div class="container">
         <header>
@@ -149,21 +139,34 @@
     </div>
 </article>
 
-<!-- Skills Section -->
-<article id="skills" class="wrapper style2">
-    <div class="container">
-        <header>
-            <h2>Skills</h2>
-        </header>
-        <div class="skill-box">
-            <section class="box style1" id="skill-content">
-                <h3 id="skill-title">Security Engineer</h3>
-                <p id="skill-description">Automation: Wrote SOPs for Qualys use...</p>
-            </section>
-            <button class="button next-skill" style="background-color: black; color: white;">Next</button>
-        </div>
-    </div>
-</article>
+<script>
+    const projects = [
+        { title: "Research Paper: GenAi in Cyber Security", description: "This research paper highlights jailbreaking of popular GenAI platforms. The goal of this was showcase both, the positives and negatives of the risinig popularity of GenAI.", file: "projects/project1.pdf" },
+        { title: "Project: Secure EHR Web Applications", description: "This project is a web application that lets Doctors and Patients securely access EHR. The goal of this was to showcase the importance of using cryptography in maintaining the Confidentiality and Integrity of data.", file: "projects/project2.pdf" },
+        { title: "Research Paper: Phishing Analysis", description: "This paper highlights the different techniques used by attackers while carrying out phishing campaigns. The goal of this paper was to highlight the importance of having security aware users and expose the weakest link in security - humans" },
+        { title: "Project: Policy Proposals for Access Control on ePHI", description: "This project included the designing of policies for an organization processing ePHI. The policies focused on access control (MAC and DAC) achieving HIPAA compliance following standards from the NIST 800-66 framework.", file: "projects/project4.pdf" },
+    ];
+
+    let currentProject = 0;
+    const projectTitle = document.getElementById("project-title");
+    const projectDescription = document.getElementById("project-description");
+    const projectDownload = document.getElementById("project-download");
+    const nextProjectButton = document.querySelector(".next-project");
+
+    function updateProject() {
+        const project = projects[currentProject];
+        projectTitle.textContent = project.title;
+        projectDescription.textContent = project.description;
+        projectDownload.href = project.file;
+    }
+
+    nextProjectButton.addEventListener("click", () => {
+        currentProject = (currentProject + 1) % projects.length;
+        updateProject();
+    });
+
+    updateProject();
+</script>
 
 <!-- Certifications and Activities -->
 <article id="certifications" class="wrapper style2">
@@ -173,10 +176,11 @@
         </header>
         <section class="box style1">
             <ul>
-                <li>Security+</li>
+                <li>Comptia Security+ SY0-701</li>
                 <li>AZ-900</li>
-                <li>CTFs on THM</li>
-                <li>Courses</li>
+                <li>CTF Competition SANS HackFest 2025 - Rank 05</li>
+                <li>Top 2% on TryHackMe</li>
+		<li>CybOrg - Digital Forensics and CyberSecurity Club</li>
             </ul>
         </section>
     </div>
