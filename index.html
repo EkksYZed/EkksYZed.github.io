@@ -19,7 +19,11 @@
 			<nav id="nav">
 				<ul class="container">
 					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
+					        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects & Research</a></li>
+        <li><a href="#certifications">Certifications & Activities</a></li>
+        <li><a href="#contact">Contact</a></li>
+					<li><a href="#work">Other Platforms</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -110,7 +114,7 @@
         const exp = experiences[currentExperience];
         titleElement.textContent = exp.title;
         companyElement.innerHTML = `<strong>${exp.company}</strong>`;
-        descriptionElement.textContent = exp.description;
+        descriptionElement.innerHTML = exp.description; // Ensuring bold formatting is retained
         detailsElement.innerHTML = exp.details.map(detail => `<li>${detail}</li>`).join("");
         toolsElement.textContent = exp.tools;
     }
@@ -181,6 +185,9 @@
                 <li>CTF Competition SANS HackFest 2025 - Rank 05</li>
                 <li>Top 2% on TryHackMe</li>
 		<li>CybOrg - Digital Forensics and CyberSecurity Club</li>
+<li>Security Blue Team Network Analysis, Threat Hunting and Vulnerability Management Certification</li>
+<li>Ethical Hacking Course by ZSecurity</li>
+
             </ul>
         </section>
     </div>
