@@ -131,7 +131,7 @@
         companyElement.innerHTML = `<strong>${exp.company}</strong>`;
         descriptionElement.innerHTML = exp.description; // Ensuring bold formatting is retained
         detailsElement.innerHTML = exp.details.map(detail => `<li>${detail}</li>`).join("");
-        toolsElement.textContent = exp.tools;
+        toolsElement.innerHTML = `<strong>Tools Used:</strong> ${exp.tools}`;
     }
 
     nextButton.addEventListener("click", () => {
