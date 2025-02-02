@@ -2162,9 +2162,11 @@ input, select, textarea {
 
     /* Fix Hamburger Button */
     #menu-toggle {
-        display: block;
-        background: none;
-        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent; /* No background */
+        border: none; /* No border */
         font-size: 24px;
         color: white;
         cursor: pointer;
@@ -2173,8 +2175,10 @@ input, select, textarea {
         right: 15px;
         top: 50%;
         transform: translateY(-50%); /* Centers it vertically */
-        padding: 5px;
-        height: auto; /* Prevents border overflow */
+        padding: 0;
+        outline: none; /* Remove any outline */
+        height: 100%;
+        width: auto;
     }
 
     /* Hide menu by default */
@@ -2210,6 +2214,7 @@ input, select, textarea {
         display: none;
     }
 }
+
 
 /* Articles */
 
