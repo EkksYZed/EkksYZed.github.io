@@ -2106,7 +2106,7 @@ input, select, textarea {
 					background: #252525;
 				}
 
-/* ========== NAVIGATION MENU ========== */
+/* ========== NAVIGATION MENU (DESKTOP) ========== */
 #nav {
     background-color: black;
     position: fixed;
@@ -2154,9 +2154,10 @@ input, select, textarea {
     #nav {
         justify-content: space-between;
         padding: 0 15px;
+        height: 3.5em; /* Ensures consistent height */
     }
 
-    /* Ensure Hamburger Menu is Visible */
+    /* Ensure Hamburger Menu Button is Visible */
     #menu-toggle {
         display: block;
         background: none;
@@ -2165,6 +2166,11 @@ input, select, textarea {
         color: white;
         cursor: pointer;
         z-index: 11000;
+        position: relative;
+        height: 3.5em; /* Ensures it stays within the bar */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Hide the menu by default */
@@ -2173,11 +2179,13 @@ input, select, textarea {
         flex-direction: column;
         position: absolute;
         top: 3.5em; /* Below the black bar */
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
         background: black;
         padding: 10px 0;
         text-align: center;
+        border-top: 2px solid white;
     }
 
     /* Show menu when active */
@@ -2188,6 +2196,7 @@ input, select, textarea {
     #nav li {
         width: 100%;
         padding: 10px 0;
+        text-align: center;
     }
 }
 
@@ -2197,6 +2206,7 @@ input, select, textarea {
         display: none;
     }
 }
+
 
 /* Articles */
 
