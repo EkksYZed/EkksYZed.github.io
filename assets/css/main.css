@@ -2113,9 +2113,9 @@ input, select, textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3.5em;
+    height: 3.5em; /* Ensures consistent height */
     display: flex;
-    justify-content: space-between; /* Aligns items */
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     z-index: 10000;
@@ -2155,9 +2155,12 @@ input, select, textarea {
         justify-content: space-between;
         padding: 0 15px;
         height: 3.5em; /* Ensures consistent height */
+        display: flex;
+        align-items: center;
+        position: relative;
     }
 
-    /* Ensure Hamburger Menu Button is Visible */
+    /* Fix Hamburger Button */
     #menu-toggle {
         display: block;
         background: none;
@@ -2166,14 +2169,15 @@ input, select, textarea {
         color: white;
         cursor: pointer;
         z-index: 11000;
-        position: relative;
-        height: 3.5em; /* Ensures it stays within the bar */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%); /* Centers it vertically */
+        padding: 5px;
+        height: auto; /* Prevents border overflow */
     }
 
-    /* Hide the menu by default */
+    /* Hide menu by default */
     #nav ul {
         display: none;
         flex-direction: column;
@@ -2206,7 +2210,6 @@ input, select, textarea {
         display: none;
     }
 }
-
 
 /* Articles */
 
