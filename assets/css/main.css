@@ -2149,18 +2149,28 @@ input, select, textarea {
     border-radius: 5px;
 }
 
+/* ========== FIXED NAVIGATION MENU ========== */
+#nav {
+    background-color: black;
+    position: fixed; /* Stays fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5em; /* Ensures consistent height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10000;
+}
+
+/* Ensure content doesn't get hidden under fixed nav */
+body {
+    padding-top: 3.5em;
+}
+
 /* ========== HAMBURGER MENU FIX (MOBILE) ========== */
 @media screen and (max-width: 768px) {
-    #nav {
-        justify-content: space-between;
-        padding: 0 15px;
-        height: 3.5em; /* Ensures consistent height */
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-
-    /* Fix Hamburger Button */
     #menu-toggle {
         display: flex;
         align-items: center;
@@ -2214,6 +2224,7 @@ input, select, textarea {
         display: none;
     }
 }
+
 
 
 /* Articles */
