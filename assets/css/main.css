@@ -2106,88 +2106,78 @@ input, select, textarea {
 					background: #252525;
 				}
 
-/* Nav */
+/* ========== NAVIGATION MENU ========== */
+#nav {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    justify-content: space-between; /* Aligns items */
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10000;
+}
 
-	#nav {
-		background-color: #282828;
-		text-align: center;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		z-index: 10000;
-		cursor: default;
-		height: 3.5em;
-		line-height: 3.5em;
-	}
+/* Navigation Links */
+#nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+}
 
-		#nav ul {
-			margin-bottom: 0;
-			list-style: none;
-			padding-left: 0;
-display: flex;
-    flex-wrap: wrap;
-		}
+#nav li {
+    padding: 0 15px;
+}
 
-		#nav li {
-			display: inline-block;
-			padding-left: 0;
-		}
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
 
-		#nav a {
-			-moz-transition: background-color .2s ease-in-out;
-			-webkit-transition: background-color .2s ease-in-out;
-			-ms-transition: background-color .2s ease-in-out;
-			transition: background-color .2s ease-in-out;
-			position: relative;
-			display: block;
-			color: #fff;
-			text-decoration: none;
-			outline: 0;
-			font-weight: 600;
-			border-radius: 8px;
-			color: #fff;
-			height: 2.5em;
-			line-height: 2.5em;
-			padding: 0 1.25em;
-		}
+#nav a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
 
-			#nav a:hover {
-				color: #fff !important;
-				background: #383838;
-			}
-
-			#nav a.active {
-				background: #484848;
-			}
-
-				#nav a.active:before {
-					content: '';
-					display: block;
-					position: absolute;
-					bottom: -0.6em;
-					left: 50%;
-					margin-left: -0.75em;
-					border-left: solid 0.75em transparent;
-					border-right: solid 0.75em transparent;
-					border-top: solid 0.6em #282828;
-				}
-
+/* ========== HAMBURGER MENU FIX (MOBILE) ========== */
 @media screen and (max-width: 768px) {
     #nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    /* Ensure Hamburger Menu is Visible */
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 11000;
     }
 
     /* Hide the menu by default */
     #nav ul {
         display: none;
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 3.5em; /* Below the black bar */
+        left: 0;
         width: 100%;
         background: black;
         padding: 10px 0;
+        text-align: center;
     }
 
     /* Show menu when active */
@@ -2197,22 +2187,7 @@ display: flex;
 
     #nav li {
         width: 100%;
-        text-align: center;
-        padding: 5px 0;
-    }
-
-    /* Hamburger Menu Button */
-    #menu-toggle {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-        z-index: 11000;
+        padding: 10px 0;
     }
 }
 
